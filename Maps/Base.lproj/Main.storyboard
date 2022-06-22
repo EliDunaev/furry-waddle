@@ -33,31 +33,69 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUI-cY-mmO" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="735"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEg-oI-iVU">
+                                <rect key="frame" x="316.5" y="831" width="77.5" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Track">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startPathRecord" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fda-lk-yuZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL9-Mi-Da2">
+                                <rect key="frame" x="99" y="831" width="80" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show Track">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showPreviosTrack" destination="BYZ-38-t0r" eventType="touchUpInside" id="g26-Rm-Pqi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mth-xQ-Kpt">
+                                <rect key="frame" x="20" y="831" width="68" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show Me">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gRh-Ri-ThS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3K-8O-6CL">
+                                <rect key="frame" x="226.5" y="831" width="76" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Stop Track">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="stopRouteTrack" destination="BYZ-38-t0r" eventType="touchUpInside" id="XS9-pj-3Gt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FEz-y2-35r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="v3K-8O-6CL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uL9-Mi-Da2" secondAttribute="trailing" constant="8" symbolic="YES" id="0zN-Od-GHR"/>
+                            <constraint firstItem="uEg-oI-iVU" firstAttribute="top" secondItem="TUI-cY-mmO" secondAttribute="bottom" constant="8" symbolic="YES" id="1lr-Rz-LoM"/>
                             <constraint firstItem="FEz-y2-35r" firstAttribute="trailing" secondItem="TUI-cY-mmO" secondAttribute="trailing" id="4u5-7z-f85"/>
-                            <constraint firstItem="FEz-y2-35r" firstAttribute="bottom" secondItem="TUI-cY-mmO" secondAttribute="bottom" id="EW0-DD-mZ7"/>
+                            <constraint firstAttribute="bottom" secondItem="TUI-cY-mmO" secondAttribute="bottom" constant="73" id="8CR-KF-JAk"/>
+                            <constraint firstItem="v3K-8O-6CL" firstAttribute="top" secondItem="TUI-cY-mmO" secondAttribute="bottom" constant="8" symbolic="YES" id="b2y-50-4SP"/>
+                            <constraint firstItem="uL9-Mi-Da2" firstAttribute="leading" secondItem="mth-xQ-Kpt" secondAttribute="trailing" constant="11" id="gAd-94-X2a"/>
                             <constraint firstItem="TUI-cY-mmO" firstAttribute="top" secondItem="FEz-y2-35r" secondAttribute="top" id="gZ6-wv-cnh"/>
+                            <constraint firstItem="uL9-Mi-Da2" firstAttribute="top" secondItem="TUI-cY-mmO" secondAttribute="bottom" constant="8" symbolic="YES" id="hJ9-zm-aLI"/>
+                            <constraint firstItem="uEg-oI-iVU" firstAttribute="leading" secondItem="v3K-8O-6CL" secondAttribute="trailing" constant="14" id="kWm-oC-Rdl"/>
+                            <constraint firstItem="mth-xQ-Kpt" firstAttribute="top" secondItem="TUI-cY-mmO" secondAttribute="bottom" constant="8" symbolic="YES" id="lZn-Ny-Hve"/>
+                            <constraint firstItem="mth-xQ-Kpt" firstAttribute="leading" secondItem="dK6-iX-Ktz" secondAttribute="leadingMargin" id="prR-tb-EID"/>
                             <constraint firstItem="TUI-cY-mmO" firstAttribute="leading" secondItem="FEz-y2-35r" secondAttribute="leading" id="u1N-WC-65z"/>
+                            <constraint firstItem="uEg-oI-iVU" firstAttribute="trailing" secondItem="dK6-iX-Ktz" secondAttribute="trailingMargin" id="zmu-E2-qKu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Maps" id="HGU-v8-Phi">
-                        <barButtonItem key="leftBarButtonItem" title="Free Map" id="5gb-zJ-fDU">
-                            <connections>
-                                <action selector="stopTracking:" destination="BYZ-38-t0r" id="7dl-Ig-ejN"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Track my location" id="RYa-mb-8qF">
-                            <connections>
-                                <action selector="currentLocation:" destination="BYZ-38-t0r" id="BcP-yT-dxd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Maps" id="HGU-v8-Phi"/>
                     <connections>
                         <outlet property="mapView" destination="TUI-cY-mmO" id="ZwU-P3-3Kd"/>
                     </connections>
