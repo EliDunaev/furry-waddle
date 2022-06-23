@@ -84,7 +84,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func loadTrack() {
-        if let coornidates = self.DB.read(locationsObject: LocationModel.self) as? [LocationModel]  {
+        if let coornidates = self.DB.read(object: LocationModel.self) as? [LocationModel]  {
             self.route?.map = nil
             self.route = GMSPolyline()
             self.routePath = GMSMutablePath()
@@ -115,8 +115,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         let mapCoordinate = items.map { LocationModel(data: $0) }
         
-        self.DB.delete(locationsObject: LocationModel.self)
-        self.DB.add(locations: mapCoordinate)
+        self.DB.delete(object: LocationModel.self)
+        self.DB.add(models: mapCoordinate)
     }
     
     func trackRecord() {

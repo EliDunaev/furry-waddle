@@ -7,7 +7,7 @@
 
 import Foundation
 import RealmSwift
-import GoogleMaps
+import CoreLocation
 
 class LocationModel: Object {
     

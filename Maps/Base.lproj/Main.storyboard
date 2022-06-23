@@ -27,7 +27,7 @@
         <!--Maps-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dK6-iX-Ktz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,6 +103,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-865.21739130434787" y="65.625"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="bb3-os-Et9">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GPl-nZ-Ppa" customClass="LoginViewController" customModule="Maps" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PBK-fQ-jQU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzI-h0-zgP">
+                                <rect key="frame" x="144.5" y="442" width="125" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="g9E-6d-n5G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вход"/>
+                                <connections>
+                                    <action selector="login:" destination="GPl-nZ-Ppa" eventType="touchUpInside" id="UmJ-uM-XfR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ako-0M-z2V">
+                                <rect key="frame" x="144.5" y="503" width="125" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="1bb-Sl-rrZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Регистрация"/>
+                                <connections>
+                                    <action selector="register:" destination="GPl-nZ-Ppa" eventType="touchUpInside" id="mYs-de-3sb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="65x-4g-n5k">
+                                <rect key="frame" x="107" y="294" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="R8k-oh-7DN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyP-DF-ukq">
+                                <rect key="frame" x="107" y="358" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="QIx-h5-Gqr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r8M-vz-584"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ako-0M-z2V" firstAttribute="top" secondItem="wzI-h0-zgP" secondAttribute="bottom" constant="30" id="Uav-Xh-vzE"/>
+                            <constraint firstItem="vyP-DF-ukq" firstAttribute="centerX" secondItem="r8M-vz-584" secondAttribute="centerX" id="VsA-cB-wX6"/>
+                            <constraint firstItem="wzI-h0-zgP" firstAttribute="centerX" secondItem="r8M-vz-584" secondAttribute="centerX" id="YAR-yN-QRc"/>
+                            <constraint firstItem="65x-4g-n5k" firstAttribute="centerX" secondItem="r8M-vz-584" secondAttribute="centerX" id="gnb-J7-nJ1"/>
+                            <constraint firstItem="vyP-DF-ukq" firstAttribute="top" secondItem="65x-4g-n5k" secondAttribute="bottom" constant="30" id="lGo-iW-q6F"/>
+                            <constraint firstItem="65x-4g-n5k" firstAttribute="top" secondItem="r8M-vz-584" secondAttribute="top" constant="250" id="mFR-rW-pqI"/>
+                            <constraint firstItem="ako-0M-z2V" firstAttribute="centerX" secondItem="r8M-vz-584" secondAttribute="centerX" id="nRT-kE-CXU"/>
+                            <constraint firstItem="wzI-h0-zgP" firstAttribute="top" secondItem="vyP-DF-ukq" secondAttribute="bottom" constant="50" id="rCf-8s-csQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="65x-4g-n5k" id="vP2-0N-Zol"/>
+                        <outlet property="passwordTextField" destination="vyP-DF-ukq" id="pmr-8F-gQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yOm-tD-aW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2468" y="66"/>
         </scene>
     </scenes>
     <resources>

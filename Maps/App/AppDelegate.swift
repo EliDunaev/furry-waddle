@@ -10,15 +10,21 @@ import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
+    var coordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // GMaps API
         GMSServices.provideAPIKey("AIzaSyAhBKe5tt8lTwLxI7eZanUNchsAYIbmCvw")
         
-        // Override point for customization after application launch.
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        
+        coordinator = AppCoordinator()
+        coordinator?.start()
+        
         return true
     }
 

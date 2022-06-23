@@ -11,6 +11,11 @@
 		9970342928624C9C003732F9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9970342828624C9C003732F9 /* LocationModel.swift */; };
 		9970342B28638D4E003732F9 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9970342A28638D4E003732F9 /* DatabaseService.swift */; };
 		9970342D28638D70003732F9 /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9970342C28638D70003732F9 /* DatabaseServiceProtocol.swift */; };
+		997034332864BBF6003732F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997034322864BBF6003732F9 /* LoginViewController.swift */; };
+		997034352864BCCB003732F9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997034342864BCCB003732F9 /* UserModel.swift */; };
+		997034382864C20C003732F9 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997034372864C20C003732F9 /* BaseCoordinator.swift */; };
+		9970343A2864C23E003732F9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997034392864C23E003732F9 /* AppCoordinator.swift */; };
+		9970343C2864C262003732F9 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9970343B2864C262003732F9 /* AuthCoordinator.swift */; };
 		997419DA2856786E00190367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997419D92856786E00190367 /* AppDelegate.swift */; };
 		997419DC2856786E00190367 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997419DB2856786E00190367 /* SceneDelegate.swift */; };
 		997419E12856786E00190367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997419DF2856786E00190367 /* Main.storyboard */; };
@@ -24,6 +29,11 @@
 		9970342828624C9C003732F9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		9970342A28638D4E003732F9 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		9970342C28638D70003732F9 /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
+		997034322864BBF6003732F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		997034342864BCCB003732F9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		997034372864C20C003732F9 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		997034392864C23E003732F9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9970343B2864C262003732F9 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		997419D62856786E00190367 /* Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		997419D92856786E00190367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		997419DB2856786E00190367 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +78,7 @@
 		9970342F286390BC003732F9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				997034362864C1FC003732F9 /* Coorditator */,
 				99703430286390D4003732F9 /* BusinessLogic */,
 				997419D92856786E00190367 /* AppDelegate.swift */,
 				997419DB2856786E00190367 /* SceneDelegate.swift */,
@@ -79,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				99A4BB2F2856914D0097ED05 /* MapViewController.swift */,
+				997034322864BBF6003732F9 /* LoginViewController.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -87,8 +99,19 @@
 			isa = PBXGroup;
 			children = (
 				9970342828624C9C003732F9 /* LocationModel.swift */,
+				997034342864BCCB003732F9 /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		997034362864C1FC003732F9 /* Coorditator */ = {
+			isa = PBXGroup;
+			children = (
+				997034372864C20C003732F9 /* BaseCoordinator.swift */,
+				997034392864C23E003732F9 /* AppCoordinator.swift */,
+				9970343B2864C262003732F9 /* AuthCoordinator.swift */,
+			);
+			path = Coorditator;
 			sourceTree = "<group>";
 		};
 		997419CD2856786E00190367 = {
@@ -265,8 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997034332864BBF6003732F9 /* LoginViewController.swift in Sources */,
+				997034382864C20C003732F9 /* BaseCoordinator.swift in Sources */,
+				9970343A2864C23E003732F9 /* AppCoordinator.swift in Sources */,
 				997419DA2856786E00190367 /* AppDelegate.swift in Sources */,
+				997034352864BCCB003732F9 /* UserModel.swift in Sources */,
 				9970342B28638D4E003732F9 /* DatabaseService.swift in Sources */,
+				9970343C2864C262003732F9 /* AuthCoordinator.swift in Sources */,
 				997419DC2856786E00190367 /* SceneDelegate.swift in Sources */,
 				9970342928624C9C003732F9 /* LocationModel.swift in Sources */,
 				9970342D28638D70003732F9 /* DatabaseServiceProtocol.swift in Sources */,
