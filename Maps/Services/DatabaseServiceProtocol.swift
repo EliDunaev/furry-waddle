@@ -9,9 +9,10 @@ import Foundation
 import RealmSwift
 
 protocol DatabaseServiceProtocol {
-    func add(locations: [Object])
-    func read(locationsObject: Object.Type) -> [Object]
-    func read(locationsObject: Object.Type, filter: String) -> [Object]
-    func delete(locations: Object)
-    func delete(locationsObject: Object.Type)
+    func add(models: [Object])
+    func add(model: Object)
+    func read(object: Object.Type) -> [Object]
+    func read(object: Object.Type, filter: String) -> [Object]
+    func delete(model: Object)
+    func delete(object: Object.Type)
 }
