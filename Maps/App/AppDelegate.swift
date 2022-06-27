@@ -11,6 +11,7 @@ import GoogleMaps
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var visualEffectView = UIVisualEffectView()
     var window: UIWindow?
     var coordinator: AppCoordinator?
 
@@ -27,6 +28,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+         self.visualEffectView.removeFromSuperview()
+     }
+
+     func applicationWillResignActive(_ application: UIApplication) {
+         if !self.visualEffectView.isDescendant(of: self.window!) {
+             let blurEffect = UIBlurEffect(style: .light)
+             self.visualEffectView = UIVisualEffectView(effect: blurEffect)
+             self.visualEffectView.frame = (self.window?.bounds)!
+             self.window?.addSubview(self.visualEffectView)
+         }
+     }
+
+     func applicationDidBecomeActive(_ application: UIApplication) {
+         self.visualEffectView.removeFromSuperview()
+     }
 
     // MARK: UISceneSession Lifecycle
 
