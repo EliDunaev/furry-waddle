@@ -10,7 +10,12 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField! {
+        didSet {
+            passwordTextField.autocorrectionType = .no
+        }
+    }
     
     let DB = DatabaseService()
     
